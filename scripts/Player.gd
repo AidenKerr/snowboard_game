@@ -25,13 +25,13 @@ func _process(delta):
 	var idle_diff = 50
 	if diff < -idle_diff:
 		$AnimatedSprite.animation = "up"
-		print("UP")
+		#print("UP")
 	elif diff > idle_diff:
 		$AnimatedSprite.animation = "down"
-		print("DOWN")
+		#print("DOWN")
 	else:
 		$AnimatedSprite.animation = "idle"
-		print("IDLE")
+		#print("IDLE")
 	
 	print(diff)
 

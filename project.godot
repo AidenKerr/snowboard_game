@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Snowboard Game"
+run/main_scene="res://scenes/game.tscn"
 config/icon="res://icon.png"
 
 [display]
@@ -33,6 +34,10 @@ window/stretch/aspect="keep"
 [gdnative]
 
 singletons=[ "res://git_api.gdnlib" ]
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [physics]
 

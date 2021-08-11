@@ -1,5 +1,6 @@
 extends Area2D
 
+signal hit
 
 # Declare member variables
 export var speed = 2.0
@@ -33,10 +34,13 @@ func _process(delta):
 		$AnimatedSprite.animation = "idle"
 		#print("IDLE")
 	
-	print(diff)
+	#print(diff)
 
 
 func _physics_process(delta):
 	var target = Vector2(position.x, targetY)
 	position = position.linear_interpolate(target, delta * speed)
 	position.y = clamp(position.y, screen_size.y * 0.2, screen_size.y * 0.9)
+
+func _on_Player_area_entered(area):
+	emit_signal("hit")
